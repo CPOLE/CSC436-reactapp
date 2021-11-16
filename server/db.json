@@ -1,0 +1,69 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Get groceries",
+      "description": "Kale, protein powder, peanut butter",
+      "author": "testuser",
+      "completed": false,
+      "dateCompleted": 1635385040583
+    },
+    {
+      "id": 2,
+      "title": "Workout",
+      "description": "Conditioning and sparring",
+      "author": "testuser",
+      "completed": false,
+      "dateCompleted": 1635216699478
+    },
+    {
+      "id": 3,
+      "title": "Clean",
+      "description": "Dishes and sweep",
+      "author": "testuser",
+      "completed": false,
+      "dateCompleted": null
+    },
+    {
+      "id": 4,
+      "title": "Cook",
+      "description": "Turkey chili",
+      "author": "testuser",
+      "completed": false,
+      "dateCompleted": null
+    },
+    {
+      "id": 5,
+      "title": "Pay bills",
+      "description": "Gas and electric",
+      "author": "testuser",
+      "completed": false,
+      "dateCompleted": 1635215297031
+    },
+    {
+      "id": 7,
+      "title": "Homework",
+      "description": "Due 10/25",
+      "author": "testuser",
+      "completed": false,
+      "dateCompleted": 1635215291538
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "testuser",
+      "password": "badpassword"
+    },
+    {
+      "username": "newtestuser",
+      "password": "pass",
+      "id": 2
+    },
+    {
+      "username": "latesttestuser",
+      "password": "pass",
+      "id": 3
+    }
+  ]
+}
