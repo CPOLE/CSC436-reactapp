@@ -4,7 +4,6 @@ import {useResource} from "react-request-hook"
 import {Link} from "react-navi"
 import {Card, Button, Form} from "react-bootstrap"
 
-<<<<<<< HEAD
 export default function Todo ( {title, author, description, todoId, completed, dateCompleted, short=false} ) {
 
     const {dispatch} = useContext(StateContext)
@@ -16,38 +15,13 @@ export default function Todo ( {title, author, description, todoId, completed, d
     }))
 
 	const [deleted, deleteTodo] = useResource( (todoId) => ( {
-=======
-export default function Todo ( {title, author, description, todoId, completed, dateCompleted, short=false} ) {
-
-    const {dispatch} = useContext(StateContext)
-	//	get rid of Set methods
-    const [toggled, toggleTodo] = useResource( (todoId, completed) => ( {
-        url: `/todos/${todoId}`,
-        method: "patch",
-        data: {completed: completed, dateCompleted}
-    }))
-
-    const [deleted, deleteTodo] = useResource( (todoId) => ( {
->>>>>>> 7043439007b24d204976d949ecd07c990a723f89
         url: `/todos/${todoId}`,
         method: "delete"
     }))
 	
-<<<<<<< HEAD
-    useEffect(() => {
-		if (toggled && toggled.data && toggled.isLoading === false) {
-        dispatch( {type: "TOGGLE_TODO", todoId: todoId, completed: toggled.data.completed, dateCompleted: toggled.data.dateCompleted} )
-    }, [toggled])
-
-    useEffect(() => {
-		if (deleted && deleted.data && deleted.isLoading === false) {
-            dispatch({type: 'DELETE_TODO', todoId: todoId})
-        }
-	}, [deleted])
-=======
 	useEffect(() => {
         if (toggled && toggled.data && toggled.isLoading === false) {
-        dispatch( {type: "TOGGLE_TODO", todoId, completed: completed: toggled.data.completed, dateCompleted: toggled.data.dateCompleted} )
+        dispatch( {type: "TOGGLE_TODO", todoId, completed: toggled.data.completed, dateCompleted: toggled.data.dateCompleted} )
     }, [toggled])
     
 	
@@ -56,7 +30,6 @@ export default function Todo ( {title, author, description, todoId, completed, d
             dispatch({type: 'DELETE_TODO', todoId: todoId})
         }
     }, [deleted])
->>>>>>> 7043439007b24d204976d949ecd07c990a723f89
 
     let processedDescription = description
     if (short) {
