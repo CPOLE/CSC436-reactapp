@@ -21,8 +21,9 @@ export default function Todo ( {title, author, description, todoId, completed, d
 	
 	useEffect(() => {
         if (toggled && toggled.data && toggled.isLoading === false) {
-        dispatch( {type: "TOGGLE_TODO", todoId, completed: toggled.data.completed, dateCompleted: toggled.data.dateCompleted} )
-    }, [toggled])
+			dispatch( {type: "TOGGLE_TODO", todoId, completed: toggled.data.completed, dateCompleted: toggled.data.dateCompleted} )
+		}
+	}, [toggled])
     
 	
     useEffect(() => {
@@ -57,4 +58,5 @@ export default function Todo ( {title, author, description, todoId, completed, d
         </Card>
     )
 }
-            
+
+export default React.memo(Todo);
