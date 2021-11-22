@@ -26,7 +26,7 @@ function MyTodoApp () {
 		<div>
 			<StateContext.Provider value={ {state: state, dispatch: dispatch} }>
                 <Router routes={routes}>
-                    <Container>
+                    <Container fluid>
                         <HeaderBar/>
                         <View/>
                     </Container>
