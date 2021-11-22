@@ -17,7 +17,7 @@ export default function HeaderBar () {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                {user.username && <Nav.Link><Link href="/todo/create">Create New Todo</Link></Nav.Link>}</Nav>
+                {user.username && <Nav.Link><Link href="/todo/create">Create New Todo0o</Link></Nav.Link>}</Nav>
             <React.Suspense fallback={"Loading..."}>
             <UserBar /></React.Suspense>
             </Navbar.Collapse>
