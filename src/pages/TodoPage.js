@@ -9,7 +9,7 @@ export default function TodoPage ( {id} ) {
     const {state} = useContext(StateContext)
 
     const [todo, getTodo] = useResource( () => ({
-        url: `/todo/${id}`,
+        url: `/todos/${id}`,
         headers: {"Authorization": `${state.user.access_token}`},
         method: "get"
     }))
