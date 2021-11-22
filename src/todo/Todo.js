@@ -4,7 +4,7 @@ import {useResource} from "react-request-hook"
 import {Link} from "react-navi"
 import {Card, Button, Form} from "react-bootstrap"
 
-export default function Todo ( {title, author, description, todoId, completed, dateCompleted, short=false} ) {
+function Todo ( {title, author, description, todoId, completed, dateCompleted, short=false} ) {
 
     const {dispatch} = useContext(StateContext)
 
