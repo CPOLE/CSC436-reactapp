@@ -9,13 +9,13 @@ function Todo ( {title, author, description, todoId, completed, dateCompleted, s
     const {dispatch} = useContext(StateContext)
 
     const [toggled, toggleTodo] = useResource( (todoId, completed) => ( {
-        url: `/todos/${todoId}`,
+        url: `/todo/${todoId}`,
         method: "patch",
         data: {completed: completed, dateCompleted: Date.now()}
     }))
 
 	const [deleted, deleteTodo] = useResource( (todoId) => ( {
-        url: `/todos/${todoId}`,
+        url: `/todo/${todoId}`,
         method: "delete"
     }))
 	
