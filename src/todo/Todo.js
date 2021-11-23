@@ -21,7 +21,7 @@ function Todo ( {title, description, author, todoId, completed, dateCompleted, s
 	
 	useEffect(() => {
         if (toggled && toggled.data && toggled.isLoading === false) {
-			dispatch( {type: "TOGGLE_TODO", todoId, completed: toggled.data.completed, dateCompleted: toggled.data.dateCompleted} )
+			dispatch( {type: "TOGGLE_TODO", todoId: todoId, completed: toggled.data.completed, dateCompleted: toggled.data.dateCompleted} )
 		}
 	}, [toggled])
     
@@ -52,9 +52,9 @@ function Todo ( {title, description, author, todoId, completed, dateCompleted, s
                     {processedDescription}</Card.Text>
                     {short && <Link href={`/todo/${todoId}`}>View full todo</Link>}
             </Card.Body>
-            <Button onClick={e => {deleteTodo(todoId)}}>Delete Todo</Button>
+            <Button onClick={e=>{deleteTodo(todoId)}}>Delete Todo</Button>
             <Form.Label>Completed:
-                <Form.Check type="checkbox" onClick={e => {toggleTodo(todoId, e.target.checked)}}/></Form.Label>
+                <Form.Check type="checkbox" onClick={e=>{toggleTodo(todoId, e.target.checked)}}/></Form.Label>
         </Card>
     )
 }
