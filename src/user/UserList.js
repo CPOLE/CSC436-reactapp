@@ -2,7 +2,7 @@ import React, {useContext} from "react"
 import User from "./User"
 import {StateContext} from "../Contexts"
 
-export default function TodoList () {
+export default function UserList () {
     
     const {state} = useContext(StateContext)
     const {users} = state

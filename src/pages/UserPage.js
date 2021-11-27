@@ -2,6 +2,7 @@ import React, {useEffect, useContext} from "react"
 import User from "../user/User"
 import {useResource} from "react-request-hook"
 import {Link} from "react-navi"
+import UserList from "../user/UserList"
 
 export default function UserPage () {
 
@@ -13,12 +14,17 @@ export default function UserPage () {
 	
     useEffect(getUsers, [])
 
+    useEffect( () => {
+        if (users && users.isLoading === false && users.data) {
+            dispatch( {type: "FETCH_USERS", users: users.data.users } )
+        }
+    }, [users])
+
+    const {data, isLoading} = users;
+
     return (
         <div>
-            { (users && users.data)
-                ? <User/>
-                : "Loading..."
-            }
+            {isLoading && "Users loading..."} <UserList/>
             <div><Link href="/">Go back</Link></div>
         </div>
     )
