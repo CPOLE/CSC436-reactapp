@@ -9,7 +9,7 @@ export default function CreateTodo () {
     const [description, setDescription] = useState("")
     const navigation = useNavigation()
     const {state, dispatch} = useContext(StateContext)
-    const {user} = state;
+    const {user} = state
     const [todo, createTodo ] = useResource(( {title, description, author} ) => ({
                 url: '/todo',
                 method: 'post',

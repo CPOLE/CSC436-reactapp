@@ -13,9 +13,9 @@ export default function Login ( {show, handleClose} ) {
     function handlePassword (evt) { setPassword(evt.target.value) }
 
     const [user, login] = useResource((username, password) => ({
-                url: "auth/login",
-                method: "post",
-                data: {username, password}
+        url: "auth/login",
+        method: "post",
+        data: {username, password}
     }))
         
     useEffect(() => {

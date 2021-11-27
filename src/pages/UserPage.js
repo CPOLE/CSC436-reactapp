@@ -15,7 +15,7 @@ export default function UserPage () {
     return (
         <div>
             { (users && users.data)
-                ? <UserPage {...users.username}/>
+                ? <User/>
                 : "Loading..."
             }
             <div><Link href="/">Go back</Link></div>
