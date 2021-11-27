@@ -26,7 +26,7 @@ export default function UserPage () {
 
     return (
         <div>
-            {isLoading && "Users loading..."} <UserList/>
+            {isLoading && "Users loading..."} <UserList users={users} />
             <div><Link href="/">Go back</Link></div>
         </div>
     )

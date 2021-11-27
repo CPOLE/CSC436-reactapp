@@ -2,10 +2,9 @@ import React, {useContext} from "react"
 import User from "./User"
 import {StateContext} from "../Contexts"
 
-export default function UserList () {
+export default function UserList ( {users} ) {
     
     const {state} = useContext(StateContext)
-    const {users} = state
 
     return (
         <div>
