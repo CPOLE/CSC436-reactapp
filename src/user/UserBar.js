@@ -4,7 +4,7 @@ import Login from "./Login"
 import {StateContext} from "../Contexts"
 import {Button} from "react-bootstrap"
 
-export default function Userbar () {
+export default function UserBar () {
 
     const Logout = React.lazy( ()=> import("./Logout"))
     const {state} = useContext(StateContext)
