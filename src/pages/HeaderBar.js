@@ -19,7 +19,7 @@ export default function HeaderBar () {
             <Nav className="me-auto">
                 {user.username && <Nav.Link><Link href="/todo/create">Create New Todo</Link></Nav.Link>}</Nav>
             <React.Suspense fallback={"Loading..."}>
-            <UserBar /></React.Suspense>
+            <UserBar/></React.Suspense>
             </Navbar.Collapse>
         </Container>
         </Navbar>

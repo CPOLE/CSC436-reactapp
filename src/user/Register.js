@@ -36,7 +36,6 @@ export default function Register ( {show, handleClose} ) {
                 setStatus("Registration successful. You may now login.")
                 alert("success")
             }
-            //dispatch({ type: 'REGISTER', username: user.data.username })
           }
         }, [user])
 

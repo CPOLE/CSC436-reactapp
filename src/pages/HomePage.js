@@ -12,12 +12,6 @@ export default function HomePage () {
 		headers: {"Authorization": `${state.user.access_token}`}
     }))
 
-    // useEffect(() => {
-        // if (state.user.access_token) {
-            // getTodos()
-        // }
-	// }, [])
-
     useEffect(() => {
         getTodos()
 	}, [state.user.access_token])

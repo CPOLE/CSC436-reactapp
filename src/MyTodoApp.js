@@ -16,6 +16,7 @@ function MyTodoApp () {
 
     const routes = mount ({
         "/": route( {view: <HomePage/>} ),
+        "/users": route( {view: <UserPage/>} ),
         "/todo/create": route( {view: <CreateTodo/>} ),
         "/todo/:id": route(req => {
             return {view: <TodoPage id={req.params.id}/>}

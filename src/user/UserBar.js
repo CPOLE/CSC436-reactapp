@@ -16,6 +16,7 @@ export default function Userbar () {
     } else {
         return (
         <div className="justify-content-end">
+            <Button variant="link" href="/users">Users</Button>
             <Button variant="link" onClick={(e) => setShowLogin(true)}>
                 Login</Button>
             <Login show={showLogin} handleClose={() => setShowLogin(false)}/>                
