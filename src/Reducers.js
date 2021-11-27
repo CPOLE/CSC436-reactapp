@@ -6,7 +6,6 @@ function userReducer (state, action) {
                 "username": action.username,
                 "access_token": action.access_token
             }
-            return [newUser, ...state]
         case "LOGOUT":
             return {
             "username": undefined,
