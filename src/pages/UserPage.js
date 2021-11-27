@@ -1,12 +1,9 @@
 import React, {useEffect, useContext} from "react"
 import {useResource} from "react-request-hook"
-import {StateContext} from "../Contexts"
 import User from "../user/User"
 import {Link} from "react-navi"
 
 export default function UserPage () {
-
-    //const {state} = useContext(StateContext)
 
     const [users, getUsers] = useResource( () => ({
         url: "auth/register",
