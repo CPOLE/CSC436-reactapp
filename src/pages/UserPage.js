@@ -1,4 +1,5 @@
 import React, {useEffect, useContext} from "react"
+import User from "../user/User"
 import {useResource} from "react-request-hook"
 import {Link} from "react-navi"
 
