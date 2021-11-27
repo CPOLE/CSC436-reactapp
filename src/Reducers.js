@@ -13,7 +13,7 @@ function userReducer (state, action) {
             "access_token": undefined
         }
         case "FETCH_USERS":
-            return users;
+            return action.users;
         default:
             return state;
     }

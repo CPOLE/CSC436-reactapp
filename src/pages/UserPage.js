@@ -6,6 +6,7 @@ import UserList from "../user/UserList"
 
 export default function UserPage () {
 
+    const {state, dispatch} = useContext(StateContext)
     const [users, getUsers] = useResource( () => ({
         url: "auth/register",
         //headers: {"Authorization": `${state.user.access_token}`},
