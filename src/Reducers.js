@@ -2,9 +2,9 @@ function userReducer (state, action) {
     switch (action.type) {
         case "LOGIN":
         case "REGISTER":
-            const newUser = {
-                username: action.username,
-                access_token: action.access_token
+            return {
+                "username": action.username,
+                "access_token": action.access_token
             }
             return [newUser, ...state]
         case "LOGOUT":
