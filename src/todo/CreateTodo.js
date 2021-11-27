@@ -10,11 +10,11 @@ export default function CreateTodo () {
     const navigation = useNavigation()
     const {state, dispatch} = useContext(StateContext)
     const {user} = state
-    const [todo, createTodo ] = useResource(( {title, description, author} ) => ({
-                url: '/todo',
-                method: 'post',
-                headers: {"Authorization": `${state.user.access_token}`},
-                data: {title, description, author}
+    const [todo, createTodo] = useResource(( {title, description, author} ) => ({
+        url: '/todo',
+        method: 'post',
+        headers: {"Authorization": `${state.user.access_token}`},
+        data: {title, description, author}
     }))
 
     function handleTitle(evt) { setTitle(evt.target.value) }

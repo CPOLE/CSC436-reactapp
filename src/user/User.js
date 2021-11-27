@@ -5,8 +5,6 @@ import {Card, Button, Form} from "react-bootstrap"
 
 function User () {
 
-    const{state} = useContext(StateContext)
-    const{user} = state
     //<Link href={`/users/${author}`}>{author}</Link>
 
     return (
@@ -20,4 +18,4 @@ function User () {
     )
 }
 
-export default React.memo(Todo);
+export default React.memo(User);
